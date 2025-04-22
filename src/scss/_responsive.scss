@@ -1,0 +1,40 @@
+@use "abstracts/variables";
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    color: variables.$text-color-light;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    display: none; //Dölj menyn som standard
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    gap: 1.1rem;
+    flex-direction: column;
+    background-color: variables.$primary-color;
+    min-width: 100%;
+    padding: 3rem 0;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .nav-menu.active {
+    display: flex; //Visa menyn när .active läggs till
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+}

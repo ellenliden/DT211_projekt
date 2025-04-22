@@ -1,0 +1,79 @@
+@use "../abstracts/variables";
+@use "../base/animations";
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$text-color-light;
+  padding: 0.5rem;
+  position: relative; //används för att kunna positionera ::after under varje länk
+}
+
+.navbar {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0% 2rem;
+}
+
+// Logga med zoom-animering vid hover
+.logo {
+  width: 4rem;
+  &:hover {
+    animation: zoomImage 0.5s forwards;
+  }
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+// Lägg till dekorativ linje under varje länk
+.nav-link {
+  position: relative; //detta för att kunna positionera ::after under varje länk
+  transition: 0.7s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    background-color: variables.$accent-color;
+    height: 2px;
+    width: 0; //startar med en bredd på 0 för att sedan läga till animering
+    transition: width 0.3s ease-in-out; //linjen ska animeras (visas)
+  }
+
+  &:hover {
+    color: variables.$accent-color;
+
+    &::after {
+      width: 100%; //vid hover växer linjen till full bredd
+    }
+  }
+}
+
+// Hamburgermeny-knapp
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(255, 255, 255);
+}

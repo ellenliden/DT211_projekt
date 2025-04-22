@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="scss/main.scss" />
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script type="module" src="js/app.js"></script>
     <link
       rel="stylesheet"
@@ -41,13 +46,22 @@
           <span class="bar"></span>
         </div>
       </nav>
+    </header>
+      <main class="app">
         <div class="hero-content">
-          <h1>Rubrik</h1>
+          <h1>Väder</h1>
           <p>
             text om väder
           </p>
         </div>
+            <form id="weatherForm">
+              <input type="text" id="cityInput" placeholder="Ange en ort..." required />
+              <button type="submit">Visa väder</button>
+            </form>
+        
+            <section id="weatherInfo" class="weather hidden"></section>
+            <div id="map" class="map"></div>
+          </main>
       </section>
-    </header>
 </body>
 </html>
