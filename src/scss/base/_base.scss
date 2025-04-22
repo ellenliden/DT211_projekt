@@ -1,9 +1,11 @@
 @use "../abstracts/variables";
 
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background: variables.$background-light;
   margin: 0;
-  padding: 2rem;
   color: variables.$text-color-dark;
+}
+main{
+  padding: 2rem;
 }
