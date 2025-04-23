@@ -38,3 +38,12 @@
     margin: 16px 0;
   }
 }
+
+.contact {
+  background-color: variables.$background-light;
+  padding: 4rem 1.5rem;
+
+  .container {
+    width: 80%;
+  }
+}
