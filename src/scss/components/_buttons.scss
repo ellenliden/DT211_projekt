@@ -9,8 +9,28 @@ button {
   cursor: pointer;
   transition: background 0.3s;
   font-size: 1rem;
+  margin: 0 auto;
 
   &:hover {
     background-color: darken(variables.$primary-color, 10%);
+  }
+}
+
+.submit-button  {
+  background-color: variables.$primary-color;
+  color: variables.$text-color-light;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+text-align: center;
+transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 }
