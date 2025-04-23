@@ -1,5 +1,7 @@
 @use "abstracts/variables";
+
 @use "pages/index";
+@use "pages/contact";
 
 @use "base/base";
 @use "base/animations";
@@ -9,4 +11,3 @@
 @use "components/buttons";
 
 @use "responsive";
-
