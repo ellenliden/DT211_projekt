@@ -1,5 +1,17 @@
 @use "abstracts/variables";
 @media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  .footer-about {
+    max-width: 19rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
   .hamburger {
     display: block;
     color: variables.$text-color-light;
@@ -18,13 +30,15 @@
   .nav-menu {
     display: none; //Dölj menyn som standard
     position: absolute;
-    top: 5.2rem;
+    top: 3.1rem;
     left: 0;
     gap: 1.1rem;
     flex-direction: column;
-    background-color: variables.$primary-color;
+    background-color: variables.$secondary-color;
     min-width: 100%;
-    padding: 3rem 0;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+    padding-left: 0;
     text-align: center;
     transition: 0.3s;
     z-index: 1000;

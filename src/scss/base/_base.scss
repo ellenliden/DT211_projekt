@@ -1,11 +1,16 @@
 @use "../abstracts/variables";
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background: variables.$background-light;
   margin: 0;
   color: variables.$text-color-dark;
 }
-main{
+main {
   padding: 2rem;
+}
+
+p {
+  line-height: 1.5;
 }
