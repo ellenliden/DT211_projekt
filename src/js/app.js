@@ -9,16 +9,22 @@
 
 // När hela sidan har laddats
 document.addEventListener("DOMContentLoaded", () => {
-  // --- HAMBURGARMENY ---
+
+  // Hamburgarmeny
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
 
   // Öppna och stäng hamburgermenyn
   if (hamburger && navMenu) {
+    /**
+     * Växlar mellan att öppna och stänga hamburgermenyn när användaren klickar på den.
+     * @listens {click} event - Klick på hamburgermenyn för att toggla visning av navigationsmenyn.
+     */
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
     });
+
 
     // Stäng meny när en länk klickas
     document.querySelectorAll(".nav-link").forEach((link) => {
@@ -46,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       setTimeout(() => {
         confirmation.classList.add("hiddenInfo");
-      }, 5000);
+      }, 5000); // väntar 5 sekunder innan bekräftelsen tas bort
     });
   }
 
